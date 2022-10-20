@@ -1,4 +1,5 @@
 .DS_Store
+.vscode
 /Services/bin
 /Services/obj
 /ServicesTests/bin
