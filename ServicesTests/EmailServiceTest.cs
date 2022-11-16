@@ -27,6 +27,7 @@ public class EmailServiceTest
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(1000);
 
         var title = driver.Title;
+        
         Assert.AreEqual("Gmail", title);
     }
 
@@ -57,6 +58,7 @@ public class EmailServiceTest
 
         var message = driver.FindElement(By.CssSelector("#yDmH0d > c-wiz > div > div.eKnrVb > div > div.j663ec > div > form > span > section > div > div > div.d2CFce.cDSmF.cxMOTc > div > div.LXRPh > div.dEOOab.RxsGPe > div"));
         var value = message.Text;
+
         Assert.AreEqual("Enter a valid email or phone number", value);
     }
 
@@ -75,6 +77,7 @@ public class EmailServiceTest
 
         var message = driver.FindElement(By.CssSelector("#yDmH0d > c-wiz > div > div.eKnrVb > div > div.j663ec > div > form > span > section > div > div > div.d2CFce.cDSmF.cxMOTc > div > div.LXRPh > div.dEOOab.RxsGPe > div"));
         var value = message.Text;
+
         Assert.AreEqual("Couldn’t find your Google Account", value);
     }
 }
